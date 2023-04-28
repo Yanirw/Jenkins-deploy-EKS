@@ -6,17 +6,17 @@ This project showcases the implementation of a continuous integration and deploy
 
 ### Final Output
 
-The final output of the project is a working NGINX web application deployed to an Amazon EKS cluster. Users can access the app by visiting the load balancer URL of the Kubernetes service. The CI/CD process ensures that any changes made to the code are automatically built and deployed(useing webhooks for build triggers), streamlining updates and improvements to the app.
+The final output of the project is a working NGINX web application deployed to an Amazon EKS cluster. Users can access the app by visiting the load balancer URL of the Kubernetes service. The CI/CD process ensures that any changes made to the code are automatically built and deployed(using webhooks for build triggers), streamlining updates and improvements to the app.
 
 ## CI/CD Process
 ![Screenshot 2023-04-28 at 22 42 30](https://user-images.githubusercontent.com/117165801/235238638-e3b1f084-e562-4b10-86c6-c5da3feb742d.png)
 
 
-1. Developers push code changes to the repository.
-2. Jenkins detects the changes and triggers a build based on the Jenkinsfile configuration.
-3. Jenkins executes the "Create an EKS Cluster" stage, which uses Terraform to provision the required Amazon EKS infrastructure, including the VPC, subnets, security groups, and other necessary components.
-4. Jenkins moves on to the "Deploy to EKS" stage, where it updates the Kubernetes configuration with the newly created EKS cluster and deploys the NGINX web application using the Kubernetes manifest files (nginx-deployment.yaml and nginx-service.yaml).
-5. The NGINX application is now accessible to users via the load balancer URL of the Kubernetes service.
+1.  Developers push code changes to the repository.
+2.  Jenkins detects the changes and triggers a build based on the Jenkinsfile configuration.
+Jenkins executes the "Create an EKS Cluster" stage, which uses Terraform (utilizing official modules) to provision the required Amazon EKS infrastructure, including the VPC, subnets, security groups, and other necessary components.
+4.  Jenkins moves on to the "Deploy to EKS" stage, where it updates the Kubernetes configuration with the newly created EKS cluster and deploys the NGINX web application using the Kubernetes manifest files (nginx-deployment.yaml and nginx-service.yaml).
+5.  The NGINX application is now accessible to users via the load balancer URL of the Kubernetes service.
 
 ### Kubernetes Application
 
