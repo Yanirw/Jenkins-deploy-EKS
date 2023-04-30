@@ -9,7 +9,7 @@ This project showcases the implementation of a continuous integration and deploy
 The final output of the project is a working NGINX web application deployed to an Amazon EKS cluster. Users can access the app by visiting the load balancer URL of the Kubernetes service. The CI/CD process ensures that any changes made to the code are automatically built and deployed(using webhooks for build triggers), streamlining updates and improvements to the app.
 
 ## CI/CD Process
-![Screenshot 2023-04-28 at 22 42 30](https://user-images.githubusercontent.com/117165801/235238638-e3b1f084-e562-4b10-86c6-c5da3feb742d.png)
+![Screenshot 2023-04-30 at 11 30 27](https://user-images.githubusercontent.com/117165801/235343532-f54ac9e6-8e15-4345-bfd1-8cdbbbd8cd89.png)
 
 
 1.  Developers push code changes to the repository.
